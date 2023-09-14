@@ -6,4 +6,10 @@ public interface HimsDao {
 
 	List<NetworkHospitals> getHospitals();
 
+	void createUser(User user);
+
+	List<Insurance> getInsurances();
+
+	void updateInsurance(Insurance ins);
+
 }

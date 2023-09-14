@@ -19,10 +19,13 @@ public class AppConfig {
 	@Bean
 	DataSource dataSource() {
 		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-		driverManagerDataSource.setUrl("jdbc:postgresql://192.168.110.48:5432/plf_training");
-		driverManagerDataSource.setUsername("plf_training_admin");
-		driverManagerDataSource.setPassword("pff123");
+		driverManagerDataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
+		driverManagerDataSource.setUsername("postgres");
+		driverManagerDataSource.setPassword("Bhara@1234");
 		driverManagerDataSource.setDriverClassName("org.postgresql.Driver");
 		return driverManagerDataSource;
+		
+		
+		
 	}
 }

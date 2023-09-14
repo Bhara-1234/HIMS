@@ -25,6 +25,20 @@ public class HimsController {
 	}
 	@RequestMapping(value="/createuser" ,method=RequestMethod.POST)
 	public void createUser(User user) {
+		irip.createUser(user);
+	}
+	
+	@RequestMapping(value="/insurances",method=RequestMethod.GET)
+	public ArrayList<Insurance> getInsurances(){
+		System.out.println("satish");
+		ArrayList<Insurance> li = (ArrayList<Insurance>) irip.getInsurances();
+		return li;
 		
+	}
+	
+	@RequestMapping(value="/save",method=RequestMethod.PUT)
+	public void save(@RequestBody Insurance ins) {
+		System.out.println(1);
+		irip.updateInsurance(ins);
 	}
 }
