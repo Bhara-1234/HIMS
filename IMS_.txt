@@ -1,0 +1,66 @@
+IMS DATA BASE
+
+
+create table ims_customers(
+    cust_id serial primary key ,
+    cust_fname varchar(50),
+    cust_lname varchar(50),
+    cust_dob date,
+    cust_address varchar(255),
+    cust_gender varchar(5),
+    cust_cdate date,
+    cust_aadhar bigint,
+    cust_status varchar(5),
+    cust_luudate date,
+    cust_luuser integer
+)
+INSERT INTO ims_customers (cust_fname, cust_lname, cust_dob, cust_address, cust_gender, cust_cdate, cust_aadhar, cust_status, cust_luudate, cust_luuser)
+VALUES
+    ('John', 'Doe', '1990-05-15', '123 Main St, City', 'M', '2023-09-14', 1234567890, 'ACT', '2023-09-14', 1),
+    ('Jane', 'Smith', '1985-08-25', '456 Elm St, Town', 'F', '2023-09-14', 9876543210, 'ACT', '2023-09-14', 2),
+    ('Alice', 'Johnson', '1998-02-10', '789 Oak St, Village', 'F', '2023-09-14', 5555555555, 'ACT', '2023-09-14', 3),
+    ('Bob', 'Williams', '1977-11-30', '101 Pine St, County', 'M', '2023-09-14', 1111222233, 'CLS', '2023-09-14', 4),
+    ('Eva', 'Brown', '1995-07-03', '222 Cedar St, Town', 'F', '2023-09-14', 9999888877, 'ACT', '2023-09-14', 5);
+
+
+
+
+  
+    create table ims_networkhospitals(
+    	hosp_id serial primary key,
+        hosp_title varchar(70),
+        hosp_location varchar(50),
+        hosp_address varchar(100),
+        hosp_contactphone bigint,
+        hosp_pincode int,
+        hosp_luudate date,
+        hosp_luuser  int
+        
+    
+    )
+
+
+INSERT INTO ims_networkhospitals (hosp_title, hosp_location, hosp_address, hosp_contactphone, hosp_pincode, hosp_luudate, hosp_luuser)
+VALUES
+    ('City General Hospital', 'City', '123 Main St, City', 1234567890, 12345, '2023-09-14', 1),
+    ('Town Medical Center', 'Town', '456 Elm St, Town', 9876543210, 54321, '2023-09-14', 2),
+    ('Village Health Clinic', 'Village', '789 Oak St, Village', 5555555555, 67890, '2023-09-14', 3),
+    ('County Health Center', 'County', '101 Pine St, County', 1111222233, 45678, '2023-09-14', 4),
+    ('Suburb Clinic', 'Suburb', '222 Cedar St, Suburb', 9999888877, 98765, '2023-09-14', 5);
+
+\
+
+
+
+
+
+
+
+
+    
+  create table ims_users(user_id serial primary key,
+                    user_name varchar(70),
+                    user_cdate date,
+                    user_pwd varchar(50),
+                        user_type varchar(10))
+    
